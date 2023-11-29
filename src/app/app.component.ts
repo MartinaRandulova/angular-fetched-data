@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HEROES } from './mock-heroes';
+import { HeroesComponent } from './heroes/heroes.component';
+
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,4 @@ import { HEROES } from './mock-heroes';
 })
 export class AppComponent {
   title = 'Tour of heroes';
-  heroes = HEROES;
 }
