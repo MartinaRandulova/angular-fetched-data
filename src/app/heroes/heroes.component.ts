@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Input} from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { NgFor, NgIf, UpperCasePipe } from '@angular/common';
@@ -14,7 +13,6 @@ import { MessageService } from '../message.service';
 export class HeroesComponent {
   
   heroes: Hero[] = [];
-  selectedHero?: Hero;
 
   constructor (private HeroService: HeroService, private MessageService: MessageService) {  }
 
@@ -23,7 +21,6 @@ export class HeroesComponent {
   }
 
   onSelect = (hero: Hero) => {
-    this.selectedHero = hero;
     this.MessageService.add('You have selected hero ' + hero.name)
     
   }
